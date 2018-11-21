@@ -7,6 +7,7 @@ import {NavDropdown} from 'react-bootstrap';
 class Header extends React.Component{
     render(){
         return(
+            <div>
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
@@ -40,6 +41,7 @@ class Header extends React.Component{
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            </div>
         );
     }
 }

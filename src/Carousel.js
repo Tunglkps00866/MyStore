@@ -4,6 +4,7 @@ import {Carousel} from 'react-bootstrap';
 class Slider extends React.Component{
     render(){
         return(
+            <div>
             <Carousel>
                     <Carousel.Item>
                         <img width={2000} height={500} alt="900x500" src="image/h4.jpg" />
@@ -27,6 +28,7 @@ class Slider extends React.Component{
                         </Carousel.Caption>
                     </Carousel.Item>
             </Carousel>
+            </div>
         );
     }
 }
