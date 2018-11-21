@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Page from './Page';
+import Router from './Router';
 
 class App extends Component {
-  constructor(props)
-  {
-    super(props);
-    this.state={message: "Hello world" };
-  }
-  onClick()
-  {
-    this.setState({message: "Hi There"});
-  }
   render() {
     return (
       <div >
-        <Page></Page>
+        <Router></Router>
       </div>
     );
   }
 }
 export default App;
+
+

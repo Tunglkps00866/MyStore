@@ -4,7 +4,7 @@ class Content extends React.Component{
     render(){
         return(
             <div>
-                <Slider></Slider>
+               {this.props.content};
             </div>
         );
     }
