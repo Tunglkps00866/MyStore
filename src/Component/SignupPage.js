@@ -4,7 +4,7 @@ class SignupPage extends React.Component{
     render(){
         const _content =[];
         _content.push(
-            <div key="05">Dang ky</div>
+            <div key="09">Dang ky</div>
         )
         return(
             <Page content={_content}></Page>

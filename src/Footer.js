@@ -1,13 +1,15 @@
 import React from 'react';
-import './App.css';
+import {Panel} from 'react-bootstrap';
 class Footer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { email: "Tunglkps00866@gmail.com" };
-    }
     render() {
         return ( 
-            <div> Copyright { this.state.email } </div>
+            <div>
+                <Panel>
+                    <Panel.Body>
+                        
+                    </Panel.Body>
+                </Panel>
+            </div>
         );
     }
 }
