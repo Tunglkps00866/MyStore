@@ -1,14 +1,14 @@
 import React from 'react';
 import Page from '../Page';
 import {Breadcrumb} from 'react-bootstrap';
-class CartPage extends React.Component{
+class LaptopPage extends React.Component{
     render(){
         const _content =[];
         _content.push(
-            <div key="04">
+            <div key="05">
             <Breadcrumb>
-            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-            <Breadcrumb.Item active>MyCart</Breadcrumb.Item>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item active>Laptop</Breadcrumb.Item>
             </Breadcrumb>;
             </div>
         )
@@ -17,4 +17,4 @@ class CartPage extends React.Component{
         );
     }
 }
-export default CartPage;
+export default LaptopPage;

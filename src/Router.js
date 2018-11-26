@@ -9,13 +9,19 @@ import CartPage from './Component/CartPage';
 import PaymentPage from './Component/PaymentPage';
 import ContactPage from './Component/ContactPage';
 import SpecialPage from './Component/SpecialPage';
+import LaptopPage from './Component/LatopPage';
+import KeyboardPage from './Component/KeyboardPage';
+import MousePage from './Component/MousePage';
 
 const AppRouter = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/trang-chu" component={HomePage}/>
+        <Route exact path="/" component={HomePage}/>
         <Route path="/san-pham" component={ProductPage}/>
+        <Route path="/laptop" component={LaptopPage}/>
+        <Route path="/ban-phim" component={KeyboardPage}/>
+        <Route path="/chuot" component={MousePage}/>
         <Route path="/gioi-thieu" component={AboutPage}/>
         <Route path="/dang-nhap" component={LoginPage}/>
         <Route path="/dang-ky" component={SignupPage}/>

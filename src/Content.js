@@ -3,7 +3,7 @@ class Content extends React.Component{
     render(){
         return(
             <div>
-               {this.props.content};
+               {this.props.content}
             </div>
         );
     }
