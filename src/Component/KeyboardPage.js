@@ -10,6 +10,7 @@ class KeyboardPage extends React.Component{
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
             <Breadcrumb.Item active>Keyboard</Breadcrumb.Item>
             </Breadcrumb>;
+            
             </div>
         )
         return(
