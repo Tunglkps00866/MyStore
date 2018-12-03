@@ -9,8 +9,6 @@ class HomePage extends React.Component{
         _content.push(
             <div key="01">
             <Carosel></Carosel>
-            <Title></Title>
-            <Title></Title>
             </div>
 
         )

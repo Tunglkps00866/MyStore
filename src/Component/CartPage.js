@@ -1,15 +1,19 @@
 import React from 'react';
 import Page from '../Page';
-import {Breadcrumb} from 'react-bootstrap';
+import {Breadcrumb,Col} from 'react-bootstrap';
 class CartPage extends React.Component{
     render(){
         const _content =[];
         _content.push(
             <div key="04">
-            <Breadcrumb>
-            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-            <Breadcrumb.Item active>MyCart</Breadcrumb.Item>
-            </Breadcrumb>;
+                <Col lg={2}></Col>
+                <Col lg={8}>
+                <Breadcrumb>
+                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                <Breadcrumb.Item active>MyCart</Breadcrumb.Item>
+                </Breadcrumb>
+                </Col>
+                <Col lg={2}></Col>
             </div>
         )
         return(

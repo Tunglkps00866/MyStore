@@ -40,7 +40,7 @@ class Products extends React.Component{
                         </Thumbnail>
                         </Col>
                     </Row>
-                </Grid>;
+                </Grid>
             </div>
         );
     }

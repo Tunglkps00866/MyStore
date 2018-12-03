@@ -4,7 +4,6 @@ import HomePage from './Component/HomePage';
 import ProductPage from './Component/ProductPage';
 import AboutPage from './Component/AboutPage';
 import LoginPage from './Component/LoginPage';
-import SignupPage from './Component/SignupPage';
 import CartPage from './Component/CartPage';
 import PaymentPage from './Component/PaymentPage';
 import ContactPage from './Component/ContactPage';
@@ -24,7 +23,6 @@ const AppRouter = () => (
         <Route path="/chuot" component={MousePage}/>
         <Route path="/gioi-thieu" component={AboutPage}/>
         <Route path="/dang-nhap" component={LoginPage}/>
-        <Route path="/dang-ky" component={SignupPage}/>
         <Route path="/gio-hang" component={CartPage}/>
         <Route path="/thanh-toan" component={PaymentPage}/>
         <Route path="/lien-he" component={ContactPage}/>

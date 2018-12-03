@@ -5,7 +5,7 @@ class Footer extends React.Component {
     render() {
         return ( 
             <div>
-                <Panel>
+                {/*<Panel>
                     <Panel.Body>                       
                         <Row className="show-grid">
                             <Col xs={6} md={6}>
@@ -38,7 +38,7 @@ class Footer extends React.Component {
                             </Col>
                         </Row>
                     </Panel.Body>
-                </Panel>
+                </Panel>*/}
             </div>
         );
     }

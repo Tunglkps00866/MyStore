@@ -27,7 +27,7 @@ class ProductPage extends React.Component{
         _productContent.push(<Grid key="content"><Row key={i}>{_content}</Row></Grid>)
         return _productContent;
     }
-    componentDismount(){
+    componentDidMount(){
         this.setState({
             content: this.buildContent()
         });
@@ -35,7 +35,7 @@ class ProductPage extends React.Component{
     render(){
         return(
             <div>
-            <Page _content={this.state.content}></Page>
+            <Page content={this.state.content}></Page>
             </div>
         );
     }

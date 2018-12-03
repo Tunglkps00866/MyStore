@@ -1,9 +1,9 @@
 import React from 'react';
-import { Navbar,Nav,MenuItem,NavItem,NavDropdown} from 'react-bootstrap';
+import { Navbar,Nav,MenuItem,NavItem,NavDropdown,FormGroup,FormControl,Button, Glyphicon} from 'react-bootstrap';
 class Header extends React.Component{
     render(){
         return(
-            <div>
+            <div className="Header">
             <Navbar collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
@@ -14,7 +14,7 @@ class Header extends React.Component{
                 <Navbar.Collapse>
                     <Nav>
                     <NavDropdown eventKey={1} title="Products" id="basic-nav-dropdown">
-                        <MenuItem eventKey={1.1} href="">Latop</MenuItem>
+                        <MenuItem eventKey={1.1} href="/san-pham">Latop</MenuItem>
                         <MenuItem eventKey={1.2} href="">Keyboard&Mouse</MenuItem>
                         <MenuItem eventKey={1.3} href="">PC</MenuItem>
                     </NavDropdown>
@@ -32,16 +32,19 @@ class Header extends React.Component{
                         ContactUs
                     </NavItem>
                     </Nav>
+                    <Navbar.Form pullRight>
+                        <FormGroup>
+                            <FormControl type="text" placeholder="Search" />
+                        </FormGroup>{' '}
+                        <Button type="submit"><Glyphicon glyph="search" /></Button>
+                        </Navbar.Form>
                     <Nav pullRight>
                     <NavItem eventKey={6} href="/dang-nhap">
-                        Login 
-                    </NavItem>
-                    <NavItem eventKey={7} href="/dang-ky">
-                        SignUp
+                        Sign in 
                     </NavItem>
                     </Nav>
                 </Navbar.Collapse>
-            </Navbar>;
+            </Navbar>
             </div>
         );
     }
