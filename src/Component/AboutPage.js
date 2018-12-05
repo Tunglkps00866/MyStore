@@ -1,7 +1,7 @@
 import React from 'react';
 import Page from '../Page';
 import {Breadcrumb,Col,Image} from 'react-bootstrap';
-import '../App.css';
+import '../Component/AboutPage.css';
 class AboutPage extends React.Component{
     render(){
         const _content =[];

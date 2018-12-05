@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from '../Page';
+import '../Component/PaymentPage.css'
 import {Breadcrumb,Col} from 'react-bootstrap';
 class PaymentPage extends React.Component{
     render(){

@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from '../Page';
+import '../Component/CartPage.css'
 import {Breadcrumb,Col} from 'react-bootstrap';
 class CartPage extends React.Component{
     render(){

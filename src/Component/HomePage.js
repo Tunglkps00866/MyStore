@@ -1,8 +1,7 @@
 import React from 'react';
 import Page from '../Page';
 import Carosel from '../Carousel'
-import Title from './Title';
-//import {Breadcrumb} from 'react-bootstrap'
+import '../Component/HomePage.css'
 class HomePage extends React.Component{
     render(){
         const _content =[];

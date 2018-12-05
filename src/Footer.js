@@ -1,6 +1,6 @@
 import React from 'react';
-import {Panel,Row,Col} from 'react-bootstrap';
-import './Component/Style.css'
+//import {Panel,Row,Col} from 'react-bootstrap';
+//import './Component/Style.css'
 class Footer extends React.Component {
     render() {
         return ( 
