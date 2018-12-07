@@ -2,12 +2,13 @@ import React from 'react';
 import Page from '../Page';
 import '../Component/ContactPage.css'
 import {Breadcrumb,Image,Row,Col,Button,FormGroup,FormControl} from 'react-bootstrap';
+//import GMap from './GMap';
 class ContactPage extends React.Component{
     render(){
         const _content =[];
+        _content.push(<Col lg={2} key="01"></Col>)
         _content.push(
-            <div key="07">
-                <Col lg={2} ></Col>
+            <div key="02">
                 <Col lg={8} >
                     <Breadcrumb>
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -15,16 +16,18 @@ class ContactPage extends React.Component{
                     </Breadcrumb>
                     <Row>
                         <div className="Page">
-                            <h1><b>CONTACT US</b></h1>
+                            <Row>
+                                <Image src="../Image/Map.png" className="Map"></Image>
+                            </Row>
                             <br/>
-                            <Col lg={4} ><Image src="../Image/mapmarker.png" className="Symbol-img"></Image>
+                            <Col lg={4}  ><Image src="../Image/mapmarker.png" className="Symbol-img"></Image>
                                 <br/>
                                 <br/>
                                 <Row>
                                     <p> 
-                                        <b>
-                                        227 Nguyen Van Luong Street, Ward 11, District 6, HoChiMinh
-                                        </b>
+                                        
+                                    227 Nguyen Van Luong Street, Ward 11, District 6
+                                        
                                     </p>
                                 </Row>
                             </Col>
@@ -33,10 +36,9 @@ class ContactPage extends React.Component{
                                 <br/>
                                 <Row>
                                     <p>
-                                        <b>
-                                        012 345 678
-                                        010 121 1314
-                                        </b>
+                                        
+                                    012.345.678 - 010.121.1314
+                                        
                                     </p>
                                 </Row>
                             </Col>
@@ -45,9 +47,9 @@ class ContactPage extends React.Component{
                                 <br/>
                                 <Row/>
                                     <p>
-                                        <b>
-                                            Example@gmail.com
-                                        </b>
+                                        
+                                        Example@gmail.com
+                                        
                                     </p>
                                 <Row/>
                             </Col>
@@ -57,8 +59,8 @@ class ContactPage extends React.Component{
                     </Row>
 
                     <Row>
-                        <div className="Page">
-                            <h1><b>FIND US</b></h1>
+                        <div className="Page" key="03">
+                            <h2><b>YOUR FEEDBACK</b></h2>
                             <br/>
                             <br/>       
                         </div>
@@ -70,7 +72,7 @@ class ContactPage extends React.Component{
                     </Row>
                     <Row>
                         <Col lg={2}></Col>
-                        <Col lg="8">
+                        <Col lg={8}>
                         <form>
                             <FormGroup controlId="formBasicText">
                             <FormControl type="text" placeholder="Your Name..."/>
@@ -82,14 +84,15 @@ class ContactPage extends React.Component{
                             <FormControl componentClass="textarea" placeholder="Message..." />
                             </FormGroup>
                         </form>
-                        <Button bsStyle="info">Submit</Button>
+                        <Button bsStyle="info">Send</Button>
                         </Col>
                         <Col lg={2}></Col>
                     </Row>
                 </Col>
-                <Col lg={2}></Col>
             </div>
         )
+        _content.push(<Col lg={2} key="03" ></Col>)
+        //_content.push(<GMap key="04"></GMap>)
         return(
             <Page content={_content}></Page>
         );

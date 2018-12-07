@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import HomePage from './Component/HomePage';
-import ProductPage from './Component/ProductPage';
+import ProductList from './Component/ProductList';
 import AboutPage from './Component/AboutPage';
 import SigninPage from './Component/SigninPage';
 import CartPage from './Component/CartPage';
@@ -18,7 +18,7 @@ const AppRouter = () => (
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route exact path="/" component={HomePage}/>
-        <Route path="/san-pham" component={ProductPage}/>
+        <Route path="/san-pham" component={ProductList}/>
         <Route path="/laptop" component={LaptopPage}/>
         <Route path="/ban-phim" component={KeyboardPage}/>
         <Route path="/chuot" component={MousePage}/>

@@ -1,0 +1,16 @@
+.Signup_Form{
+    color: black;
+    text-align: center;
+    background-color:white;
+}
+.Form{
+    width: 80%;
+    text-align: left;
+    padding: 0 10% 0 10%
+}
+
+.Avata {
+    width: 20%;
+    height: 20%;
+}
+

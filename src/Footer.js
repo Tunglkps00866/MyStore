@@ -1,44 +1,22 @@
 import React from 'react';
-//import {Panel,Row,Col} from 'react-bootstrap';
-//import './Component/Style.css'
+import {Panel,Row,Col,Image} from 'react-bootstrap';
+import './Footer.css'
 class Footer extends React.Component {
     render() {
         return ( 
             <div>
-                {/*<Panel>
-                    <Panel.Body>                       
-                        <Row className="show-grid">
-                            <Col xs={6} md={6}>
-                                <Row className="content-grid">
-
-                                </Row>
-                            </Col>
-                            <Col xs={6} md={6}>
-                                <Row className="content-grid">
-                                    Our Partner
-                                </Row>
-                                <Col xs={4} md={4}>
-                                <img src="../image/corsair-logo.jpg" className="logo-img"></img>
-                                </Col>
-                                <Col xs={4} md={4}>
-                                <img src="../image/MSI-logo.png" className="logo-img"></img>
-                                </Col>
-                                <Col xs={4} md={4}>
-                                <img src="../image/logitech-logo.png" className="logo-img"></img>
-                                </Col>
-                                <Col xs={4} md={4}>
-                                <img src="../image/corsair-logo.jpg" className="logo-img"></img>
-                                </Col>
-                                <Col xs={4} md={4}>
-                                <img src="../image/MSI-logo.png" className="logo-img"></img>
-                                </Col>
-                                <Col xs={4} md={4}>
-                                <img src="../image/logitech-logo.png" className="logo-img"></img>
-                                </Col>
-                            </Col>
-                        </Row>
-                    </Panel.Body>
-                </Panel>*/}
+                <hr/>
+                    <Row>                       
+                        <Col lg={6}>
+                            <h3>asdasd</h3>
+                        </Col>
+                        <Col lg={6}>
+                            <h3>Our Partner</h3>
+                            <Image src="../Image/MSI-logo.png" className="brand-icon"></Image>
+                            <Image src="../Image/logitech-logo.png" className="brand-icon"></Image>
+                            <Image src="../Image/corsair-logo.png" className="brand-icon"></Image>
+                        </Col>
+                    </Row>
             </div>
         );
     }

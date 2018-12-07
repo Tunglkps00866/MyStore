@@ -5,7 +5,7 @@ class LaptopPage extends React.Component{
     render(){
         const _content =[];
         _content.push(
-            <div key="05">
+            <div key="01">
             <Breadcrumb>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
             <Breadcrumb.Item active>Laptop</Breadcrumb.Item>

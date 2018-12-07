@@ -1,16 +1,16 @@
 import React from 'react';
 import Page from '../Page';
-import {FormControl,Row,Col,FormGroup,Image,Button,} from 'react-bootstrap';
+import {FormControl,Row,Col,FormGroup,Image,Button} from 'react-bootstrap';
 import '../Component/SignupPage.css';
 class SignupPage extends React.Component{
     render(){
         const _content =[];
-        _content.push(
-            <Col lg={4}></Col>
-            <Col lg={4}>
+        _content.push(<Col lg={4} key="01"></Col>)
+        _content.push( 
+            <Col lg={4} key="02">
                     <Row>
                         <div>
-                            <div className="Login_Form" key={"09"}>
+                            <div className="Signup_Form" key={"10"}>
                             <br/>
                             <Image src="../Image/avata.jpg" className="Avata" rounded/>
                             <br/>
@@ -48,14 +48,16 @@ class SignupPage extends React.Component{
                                     <FormControl type="password" placeholder="Confirm Password..."/>
                                     </FormGroup>
                                 </form>
-                                <Button bsStyle="info">Sign in</Button>
                             </div>
+                            <a href="/dang-nhap" >Back to Sign In</a><br/>
+                            <br/>
+                            <Button bsSize="large" bsStyle="info">Sign up</Button>
                             </div> 
                         </div> 
                     </Row>
                 </Col>
-                <Col lg={4}></Col>
         )
+        _content.push(<Col lg={4} key="03"></Col>)
         return(
             <Page content={_content}></Page>
         );

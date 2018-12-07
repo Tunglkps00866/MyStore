@@ -1,19 +1,17 @@
 import React from 'react';
-import {SplitButton,MenuItem,Row} from 'react-bootstrap';
+import {DropdownButton,MenuItem,Row} from 'react-bootstrap';
+import '../Component/Filter.css'
 class Filter extends React.Component{
     render (){
         return (
-            <div>
-                <Row>
-                <SplitButton title="Dropdown right" pullRight id="split-button-pull-right">
-                    <MenuItem eventKey="1">Action</MenuItem>
-                    <MenuItem eventKey="2">Another action</MenuItem>
-                    <MenuItem eventKey="3">Something else here</MenuItem>
-                    <MenuItem divider />
-                    <MenuItem eventKey="4">Separated link</MenuItem>
-                </SplitButton>
-                </Row>
-            </div>
+            <Row>
+            <br/>
+            <DropdownButton title="Dropdown" id="bg-nested-dropdown" className="Filter">
+                <MenuItem eventKey="1">Dropdown link</MenuItem>
+                <MenuItem eventKey="2">Dropdown link</MenuItem>
+            </DropdownButton>
+            <hr/>
+            </Row>
         );
     }
 }

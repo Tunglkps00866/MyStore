@@ -6,7 +6,7 @@ class PaymentPage extends React.Component{
     render(){
         const _content =[];
         _content.push(
-            <div key="05">
+            <div key="01">
                 <Col lg={2}></Col>
                 <Col lg={8}>
                     <Breadcrumb>
