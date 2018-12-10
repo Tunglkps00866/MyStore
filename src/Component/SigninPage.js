@@ -1,47 +1,86 @@
 import React from 'react';
 import Page from '../Page';
-import {FormControl,Row,Col,FormGroup,Image,Button,Checkbox} from 'react-bootstrap';
+import {FormControl,Row,Col,FormGroup,Image,Button,Checkbox,Breadcrumb,Grid} from 'react-bootstrap';
 import '../Component/SigninPage.css';
 class SigninPage extends React.Component{
-    render(){
-        const _content =[];
-        _content.push(<Col lg={4} key="01"></Col>)
+    buildContent(){
+        let _content=[];
         _content.push(
-            <Row>
-                <Col lg={4} key="02">
-                    <Row>
-                        <div>
-                            <div className="Signin_Form" key={"09"}>
-                            <br/>
-                            <Image src="../Image/avata.jpg" className="Avata" rounded/>
-                            <br/>
-                            <h1><b>SIGN IN</b></h1> 
-                            <div>
-                                <form className="Form">
-                                    <FormGroup controlId="formBasicText">
-                                    <FormControl type="text" placeholder="Username..."/>
-                                    </FormGroup>
-                                </form>
-                                <form className="Form">
-                                    <FormGroup controlId="formBasicText">
-                                    <FormControl type="password" placeholder="Password..."/>
-                                    </FormGroup>
-                                </form>
-                            </div>
-                            <Checkbox inline className="checkbox_left">Remember me</Checkbox>
-                            <a href="#" className="a_left">Forgot Password?</a>
-                            <a href="/dang-ky" className="a_right">Create Account</a><br/>
-                            <Button bsStyle="info">Sign in</Button>
-                            </div> 
-                        </div>
-                        
-                    </Row>
-                </Col>
+            <Row key="01">
+                <Breadcrumb>
+                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                <Breadcrumb.Item active>Contact Us</Breadcrumb.Item>
+                </Breadcrumb>
             </Row>
-        )
-        _content.push(<Col lg={4} key="03"></Col>)
+        );
+        _content.push(
+            <Row key="02" className="Signin_Form">
+            <Col lg={4}></Col>
+            <Col lg={4}>
+            <Image src="../Image/avata.jpg" className="Avata" rounded/>
+            </Col>
+            <Col lg={4}></Col>
+            </Row>
+        );
+        _content.push(
+            <Row key="03" className="Signin_Form">
+            <Col></Col>
+            <Col lg="12">
+            <h1><b>SIGN IN</b></h1>
+            </Col>
+            <Col></Col>
+            </Row>
+        );
+        _content.push(
+            <Row key="04" className="Signin_Form">
+                <Col lg={2}></Col>
+                    <Col lg={8}>
+                        <form className="Form">
+                            <FormGroup controlId="formBasicText">
+                            <FormControl type="text" placeholder="Username..."/>
+                            </FormGroup>
+                        </form>
+                        <form className="Form">
+                            <FormGroup controlId="formBasicText">
+                            <FormControl type="password" placeholder="Password..."/>
+                            </FormGroup>
+                        </form>
+                    </Col>
+                <Col lg={2}></Col>            
+            </Row>
+        );
+        _content.push(
+            <Row key="05">
+            <Col lg={3}></Col>
+                <Col lg={6}>
+                <Checkbox inline>Remember me</Checkbox>
+                </Col>
+            <Col lg={3}></Col>
+            </Row>
+        );
+        _content.push(
+            <Row key="06" className="Signin_Form">
+                <Col lg={2}></Col>
+                <Col lg={4}>
+                <a href="#">Forgot Password?</a>
+                </Col>
+                <Col lg={4}>
+                <a href="/dang-ky">Create Account</a><br/>
+                </Col>
+                <Col lg={2}></Col>
+                
+            </Row>
+        );
+        _content.push(
+            <Row key="07" className="Signin_Form">
+                <Button bsStyle="info">Sign in</Button>
+            </Row>
+        );
+        return(<Grid>{_content}</Grid>);
+    }
+    render(){
         return(
-            <Page content={_content}></Page>
+            <Page content={this.buildContent()}></Page>
         );
     }
 }

@@ -1,76 +1,64 @@
 import React from 'react';
 import Page from '../Page';
 import '../Component/ContactPage.css'
-import {Breadcrumb,Image,Row,Col,Button,FormGroup,FormControl} from 'react-bootstrap';
+import {Grid, Breadcrumb,Image,Row,Col,Button,FormGroup,FormControl} from 'react-bootstrap';
 //import GMap from './GMap';
 class ContactPage extends React.Component{
-    render(){
-        const _content =[];
-        _content.push(<Col lg={2} key="01"></Col>)
-        _content.push(
-            <div key="02">
-                <Col lg={8} >
-                    <Breadcrumb>
-                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item active>ContactUs</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <Row>
-                        <div className="Page">
-                            <Row>
-                                <Image src="../Image/Map.png" className="Map"></Image>
-                            </Row>
-                            <br/>
-                            <Col lg={4}  ><Image src="../Image/mapmarker.png" className="Symbol-img"></Image>
-                                <br/>
-                                <br/>
-                                <Row>
-                                    <p> 
-                                        
-                                    227 Nguyen Van Luong Street, Ward 11, District 6
-                                        
-                                    </p>
-                                </Row>
-                            </Col>
-                            <Col lg={4} ><Image src="../Image/phone.png" className="Symbol-img"></Image>
-                                <br/>
-                                <br/>
-                                <Row>
-                                    <p>
-                                        
-                                    012.345.678 - 010.121.1314
-                                        
-                                    </p>
-                                </Row>
-                            </Col>
-                            <Col lg={4} ><Image src="../Image/mail.png" className="Symbol-img"></Image>
-                                <br/>
-                                <br/>
-                                <Row/>
-                                    <p>
-                                        
-                                        Example@gmail.com
-                                        
-                                    </p>
-                                <Row/>
-                            </Col>
-                            <br/>
-                            <br/>       
-                        </div>
-                    </Row>
+    buildContent() {
 
-                    <Row>
-                        <div className="Page" key="03">
+        let _content = [];
+        _content.push(
+            <Row key="01">
+                <Breadcrumb>
+                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                <Breadcrumb.Item active>Contact Us</Breadcrumb.Item>
+                </Breadcrumb>
+            </Row>
+        );
+        _content.push(
+            <Row key="row-02">
+                <Col lg={2}></Col>
+                    <Col lg={8}>
+                        <Image src="../Image/Map.png" className="Map"></Image>
+                    </Col>
+                <Col lg={2}></Col>
+            </Row>
+        );
+        _content.push(
+            <Row key="row-03">
+                <Col lg={4} className="Page">
+                        <Image src="../Image/mapmarker.png" className="Symbol-img"></Image>
+                            <p>
+                            227 Nguyen Van Luong Street, Ward 11, District 6    
+                            </p>
+                </Col>
+                <Col lg={4} className="Page">
+                        <Image src="../Image/phone.png" className="Symbol-img"></Image>
+                            <p>    
+                            012.345.678 - 010.121.1314    
+                            </p>
+                </Col>
+                <Col lg={4} className="Page">
+                    <Image src="../Image/mail.png" className="Symbol-img"></Image>
+                            <p> 
+                                Example@gmail.com 
+                            </p>
+                </Col>
+            </Row>
+        );
+        _content.push(
+            <Row key="row-04">
+                <Col></Col>
+                    <Col lg={12}>
+                        <div className="Page">
                             <h2><b>YOUR FEEDBACK</b></h2>
-                            <br/>
-                            <br/>       
                         </div>
-                    </Row>
-                    <Row>
-                        <Col lg={12}>
-                                                        
-                        </Col>
-                    </Row>
-                    <Row>
+                    </Col> 
+                <Col></Col>
+            </Row>
+        )
+        _content.push(
+            <Row key="row-05">
                         <Col lg={2}></Col>
                         <Col lg={8}>
                         <form>
@@ -88,13 +76,12 @@ class ContactPage extends React.Component{
                         </Col>
                         <Col lg={2}></Col>
                     </Row>
-                </Col>
-            </div>
         )
-        _content.push(<Col lg={2} key="03" ></Col>)
-        //_content.push(<GMap key="04"></GMap>)
+        return (<Grid>{_content}</Grid>);
+    }
+    render(){
         return(
-            <Page content={_content}></Page>
+            <Page content={this.buildContent()}></Page>
         );
     }
 }

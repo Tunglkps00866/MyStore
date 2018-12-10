@@ -2,6 +2,7 @@
   color: black;
   text-align: center;
   background-color:white;
+  padding-top:2%;
 }
 
 .Form{
@@ -15,12 +16,4 @@
   width: 20%;
   height: 20%;
 }
-.a_left{
-  padding-right: 10%;
-}
-.a_right{
-  padding-left: 10%
-}
-.checkbox_left{
-  padding-right: 10%;
-}
+
