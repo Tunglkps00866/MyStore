@@ -6,10 +6,8 @@
 }
 
 .Form{
-  width: 80%;
-  text-align: left;
+  width: 70%;
   margin: 0 10%;
-
 }
 
 .Avata {
@@ -17,3 +15,13 @@
   height: 20%;
 }
 
+.checkbox_remember
+{
+  padding-left:10%;
+  padding-right:10%;
+}
+.button{
+  background-image: none;
+  background-color: black;
+  border: none;
+}

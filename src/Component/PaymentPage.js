@@ -1,27 +1,40 @@
 import React from 'react';
 import Page from '../Page';
 import '../Component/PaymentPage.css'
-import {Breadcrumb,Col} from 'react-bootstrap';
+import {Breadcrumb,Col,Row,Grid} from 'react-bootstrap';
 class PaymentPage extends React.Component{
-    render(){
-        const _content =[];
+    buildContent(){
+        let _content=[];
         _content.push(
-            <div key="01">
+            <Row key="01">
                 <Col lg={2}></Col>
                 <Col lg={8}>
                     <Breadcrumb>
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item href="/gio-hang">
-                        MyCart
-                    </Breadcrumb.Item>
-                    <Breadcrumb.Item active>Payment</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/gio-hang">MyCart</Breadcrumb.Item>
+                    <Breadcrumb.Item active>MyPayment</Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>
                 <Col lg={2}></Col>
-            </div>
-        )
+            </Row>
+        );
+        _content.push(
+            
+        );
+        _content.push(
+            
+        );
+        _content.push(
+            
+        );
+        _content.push(
+            
+        );
+        return (<Grid>{_content}</Grid>)
+    }
+    render(){
         return(
-            <Page content={_content}></Page>
+            <Page content={this.buildContent()}></Page>
         );
     }
 }

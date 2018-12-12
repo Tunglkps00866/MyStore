@@ -19,6 +19,6 @@ class SpecialPage extends React.Component{
         return(
             <Page content={_content}></Page>
         );
-    }
+    } 
 }
 export default SpecialPage;

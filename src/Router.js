@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import HomePage from './Component/HomePage';
-import ProductList from './Component/ProductList';
+import ProductList from './Component/ProductListPage';
 import AboutPage from './Component/AboutPage';
 import SigninPage from './Component/SigninPage';
 import CartPage from './Component/CartPage';

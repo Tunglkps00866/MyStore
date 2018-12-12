@@ -2,8 +2,11 @@
     text-align: center;
     color: black;
     font-size: 15px;
-  }
-  .Panel_Img{
-    width: 80%;
-    height: 80%;
-  }
+}
+.Panel_Img{
+  width: 80%;
+  height: 80%;
+}
+.text{
+  text-align: left;
+}

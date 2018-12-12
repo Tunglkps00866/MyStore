@@ -2,6 +2,7 @@
     color: black;
     text-align: center;
     background-color:white;
+    padding-top: 2%;
 }
 .Form{
     width: 80%;
@@ -13,4 +14,9 @@
     width: 20%;
     height: 20%;
 }
+.button{
+    background-image: none;
+    background-color: black;
+    border: none;
+  }
 

@@ -1,19 +1,23 @@
 let _data = [
     {
-        product_name:"San pham 1",
-        product_descript: "Chi tiet"
+        product_name:"Lenovo Legion Y520",
+        product_descript: "15.6 Essential Gaming Laptop.",
+        img: "image/Latop-lenovo.png"
     },
     {
-        product_name:"San pham 2",
-        product_descript: "Chi tiet"
+        product_name:"Lenovo Legion Y520",
+        product_descript: "15.6 Essential Gaming Laptop.",
+        img: "image/Latop-lenovo.png"
     },
     {
-        product_name:"San pham 3",
-        product_descript: "Chi tiet"
+        product_name:"Lenovo Legion Y520",
+        product_descript: "15.6 Essential Gaming Laptop.",
+        img: "image/Latop-lenovo.png"
     },
     {
-        product_name:"San pham 4",
-        product_descript: "Chi tiet"
+        product_name:"Lenovo Legion Y520",
+        product_descript: "15.6 Essential Gaming Laptop.",
+        img: "image/Latop-lenovo.png"
     },
 ];
 module.exports = {

@@ -2,7 +2,6 @@ import React from 'react';
 import Page from '../Page';
 import '../Component/ContactPage.css'
 import {Grid, Breadcrumb,Image,Row,Col,Button,FormGroup,FormControl} from 'react-bootstrap';
-//import GMap from './GMap';
 class ContactPage extends React.Component{
     buildContent() {
 
@@ -56,7 +55,7 @@ class ContactPage extends React.Component{
                     </Col> 
                 <Col></Col>
             </Row>
-        )
+        );
         _content.push(
             <Row key="row-05">
                         <Col lg={2}></Col>
@@ -76,7 +75,7 @@ class ContactPage extends React.Component{
                         </Col>
                         <Col lg={2}></Col>
                     </Row>
-        )
+        );
         return (<Grid>{_content}</Grid>);
     }
     render(){
