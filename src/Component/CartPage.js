@@ -20,6 +20,13 @@ class CartPage extends React.Component{
         _content.push(
             
         );
+        _content.push(
+            
+        );
+        _content.push(
+            
+        );
+
         return (<Grid>{_content}</Grid>)
     }
     render(){

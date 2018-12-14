@@ -5,9 +5,10 @@
   padding-top:2%;
 }
 
-.Form{
-  width: 70%;
-  margin: 0 10%;
+.Signin_Form .Form{
+  width: 50%;
+  text-align: left;
+  margin: 0 25%;
 }
 
 .Avata {
