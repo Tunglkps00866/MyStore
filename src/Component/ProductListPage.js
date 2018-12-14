@@ -12,7 +12,7 @@ class ProductList extends React.Component{
     }
     buildContent(){
         let _content=[];
-        let data= Data.data;
+        let data= Data.getProducList("laptop");
         for (var i in data){
             _content.push(
             <Col key={i} sx={6} md={4}>
