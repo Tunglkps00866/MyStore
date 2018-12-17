@@ -1,7 +1,7 @@
 import React from 'react';
 import Page from '../Page';
 import Carosel from '../Carousel'
-import ProductList from '../Component/ProductList'
+import ProductList from '../Component/ProductPage'
 import '../Component/HomePage.css'
 class HomePage extends React.Component{
     render(){

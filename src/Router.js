@@ -1,14 +1,17 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import HomePage from './Component/HomePage';
-import ProductList from './Component/ProductListPage';
+import ProductList from './Component/ProductPage';
 import AboutPage from './Component/AboutPage';
 import SigninPage from './Component/SigninPage';
 import CartPage from './Component/CartPage';
 import PaymentPage from './Component/PaymentPage';
 import ContactPage from './Component/ContactPage';
 import SpecialPage from './Component/SpecialPage';
-import LaptopPage from './Component/LatopPage';
+import LaptopList from './Component/LaptopPage';
+import MouseList from './Component/MousePage';
+import SpeakerList from './Component/SpeakerPage';
+import HeadphoneList from './Component/HeadphonePage';
 import KeyboardPage from './Component/KeyboardPage';
 import MousePage from './Component/MousePage';
 import SignupPage from './Component/SignupPage';
@@ -19,7 +22,10 @@ const AppRouter = () => (
       <Switch>
         <Route exact path="/" component={HomePage}/>
         <Route path="/san-pham" component={ProductList}/>
-        <Route path="/laptop" component={LaptopPage}/>
+        <Route path="/laptop" component={LaptopList}/>
+        <Route path="/chuot" component={MouseList}/>
+        <Route path="/tai-nghe" component={HeadphoneList}/>
+        <Route path="/loa" component={SpeakerList}/>
         <Route path="/ban-phim" component={KeyboardPage}/>
         <Route path="/chuot" component={MousePage}/>
         <Route path="/gioi-thieu" component={AboutPage}/>

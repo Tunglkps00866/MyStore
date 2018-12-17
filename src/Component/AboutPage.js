@@ -15,7 +15,7 @@ class AboutPage extends React.Component{
             </Row>
         );
         _content.push(
-            <Row>
+            <Row key="02">
                 <Col lg={2}></Col>
                     <Col lg={8}>
                         <div className="Page">

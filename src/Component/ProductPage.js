@@ -3,7 +3,7 @@ import Page from '../Page';
 import Products from './Products';
 import Data from '../Data';
 import { Col,Grid,Row } from 'react-bootstrap';
-class MouseList extends React.Component{
+class ProductList extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -12,7 +12,7 @@ class MouseList extends React.Component{
     }
     buildContent(){
         let _content=[];
-        let data= Data.getProducList("mouse");
+        let data= Data.getProducList();
         for (var i in data){
             _content.push(
             <Col key={i} sx={6} md={4}>
@@ -37,4 +37,4 @@ class MouseList extends React.Component{
         );
     }
 }
-export default MouseList;
+export default ProductList;

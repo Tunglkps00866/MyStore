@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar,Nav,MenuItem,NavItem,NavDropdown,FormGroup,FormControl,Button,DropdownButton, Glyphicon} from 'react-bootstrap';
+import { Navbar,Nav,MenuItem,NavItem,NavDropdown,FormGroup,FormControl,Button, Glyphicon} from 'react-bootstrap';
 class Header extends React.Component{
     render(){
         return(
@@ -14,15 +14,12 @@ class Header extends React.Component{
                 <Navbar.Collapse>
                     <Nav>
                     <NavDropdown eventKey={1} title="Products" id="basic-nav-dropdown">
-                        <MenuItem eventKey={1.1} href="/san-pham">Latop</MenuItem>
-                        <MenuItem eventKey={1.2} href="/phu-kien">Accessories</MenuItem>
-                        <DropdownButton title="Default button" id="dropdown-size-medium">
-                            <MenuItem eventKey="1">Action</MenuItem>
-                            <MenuItem eventKey="2">Another action</MenuItem>
-                            <MenuItem eventKey="3">Something else here</MenuItem>
-                            <MenuItem divider />
-                            <MenuItem eventKey="4">Separated link</MenuItem>
-                        </DropdownButton>
+                        <MenuItem eventKey={1.1} href="/san-pham">All Products</MenuItem>
+                        <MenuItem divider />
+                        <MenuItem eventKey={1.2} href="/laptop">Laptop</MenuItem>
+                        <MenuItem eventKey={1.3} href="/chuot">Mouse</MenuItem>
+                        <MenuItem eventKey={1.4} href="/tai-nghe">HeadPhone</MenuItem>
+                        <MenuItem eventKey={1.5} href="/loa">Speaker</MenuItem>
                     </NavDropdown>
                     <NavItem eventKey={2} href="/khuyen-mai">
                         SpecialOffer

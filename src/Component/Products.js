@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid,Row,Col,Thumbnail,Button} from 'react-bootstrap';
+import {Grid,Row,Col,Thumbnail,Button,Glyphicon} from 'react-bootstrap';
 class Products extends React.Component{
     render(){
         return(
@@ -11,9 +11,9 @@ class Products extends React.Component{
                             <h3>{this.props.data.product_name}</h3>
                             <p>{this.props.data.product_descript}</p>
                             <p>
-                            <Button bsStyle="primary">Details</Button>
+                            <Button bsStyle="primary"><Glyphicon glyph="menu-hamburger" /></Button>
                             &nbsp;
-                            <Button bsStyle="default">Add to Cart</Button>
+                            <Button bsStyle="default">Add to <Glyphicon glyph="shopping-cart" /></Button>
                             </p>
                         </Thumbnail>
                         </Col>

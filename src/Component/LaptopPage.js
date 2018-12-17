@@ -3,7 +3,7 @@ import Page from '../Page';
 import Products from './Products';
 import Data from '../Data';
 import { Col,Grid,Row } from 'react-bootstrap';
-class ProductList extends React.Component{
+class LaptopList extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -37,4 +37,4 @@ class ProductList extends React.Component{
         );
     }
 }
-export default ProductList;
+export default LaptopList;
