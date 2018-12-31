@@ -1,22 +1,27 @@
 import React from 'react';
 import Page from '../Page';
 import '../Component/PaymentPage.css'
-import {Breadcrumb,Col,Row,Grid,FormControl,FormGroup,Glyphicon,Image} from 'react-bootstrap';
-import SelectBox from './SelectBox';
+import {Breadcrumb,Col,Row,Grid,FormControl,FormGroup,Glyphicon,Image,Button} from 'react-bootstrap';
+import Select from 'react-select';
+
+
+const CountryList = [
+    { label: "Ho Chi Minh", value: 1 },
+    { label: "Ha Noi", value: 2 },
+    { label: "Hai Phong", value: 3 },
+    { label: "Da Nang", value: 4 },
+    { label: "Hue", value: 5 },
+  ];
 class PaymentPage extends React.Component{
     buildContent(){
         let _content=[];
         _content.push(
             <Row key="01">
-                <Col lg={2}></Col>
-                <Col lg={8}>
-                    <Breadcrumb>
-                    <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item href="/gio-hang">MyCart</Breadcrumb.Item>
-                    <Breadcrumb.Item active>MyPayment</Breadcrumb.Item>
-                    </Breadcrumb>
-                </Col>
-                <Col lg={2}></Col>
+                <Breadcrumb>
+                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                <Breadcrumb.Item href="/gio-hang">MyCart</Breadcrumb.Item>
+                <Breadcrumb.Item active>MyPayment</Breadcrumb.Item>
+                </Breadcrumb>
             </Row>
         );
         _content.push(
@@ -28,118 +33,98 @@ class PaymentPage extends React.Component{
         );
         _content.push(
             <Row key="03">
-                <Col lg={6}>
-                    <form className="Form">
-                        <Grid>
-                            <Row>
-                                <Col lg={12}>
-                                    <label>
-                                        <Glyphicon glyph="info-sign"></Glyphicon><h4>Personal Infomation</h4>
-                                    </label>
-                                </Col>
-                                <Col lg={12}>
-                                    <FormGroup >     
-                                    <FormControl type="text" placeholder="First Name..."/>
-                                    </FormGroup>
-                                </Col>
-                                <Col lg={12}>
-                                    <FormGroup > 
-                                    <FormControl type="text" placeholder="Last Name..."/>
-                                        
-                                    </FormGroup>
-                                </Col>
-                                <Col lg={12}>
-                                    <FormGroup >
-                                        <FormControl type="text" placeholder="Address..."/>
-                                    </FormGroup>
-                                </Col>
-                                <Col lg={12}>
-                                    <FormGroup >
-                                        <FormControl type="email" placeholder="Email..."/>
-                                    </FormGroup>
-                                </Col>
-                                <Col lg={12}>
-                                    <FormGroup >
-                                        <FormControl type="text" placeholder="Phone"/>
-                                    </FormGroup>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col lg={12}>
-                                <SelectBox items={[
-                                    {value:'VietNam',id:1},
-                                    {value:'Indonesia', id:2},
-                                    {value:'Singapore',id:3},
-                                    {value:'Japan',id:4}
-                                ]}>    
-                                </SelectBox>
-                                
-                                <FormGroup>
-                                    <FormControl type="text" placeholder="Postal code..."></FormControl>
-                                </FormGroup>
-                                </Col>
-                            </Row>
-                        </Grid>
-                    </form>
-                </Col> 
-            </Row>
-        );
-
-        {/*<Col lg={6}>
-                    <label>
-                        <Glyphicon glyph="info-sign"></Glyphicon><h4>Payment Method</h4>
-                    </label>
-                    <form className="Form">
+                <Col md={6}>
+                    <h4><Glyphicon glyph="info-sign"></Glyphicon>Personal Infomation</h4>
+                    <form>
                         <FormGroup >
                         <Row>
                         <Col lg={6}>
-                            <Col lg={4}>
-                                <Image src="../Image/phone.png" className="icon"/>
-                            </Col>
-                            <Col lg={4}>
-                                <Image src="../Image/phone.png" className="icon"/>
-                            </Col>
-                            <Col lg={4}></Col>`
-                            
+                            <FormControl type="text" placeholder="First Name..."/>
                         </Col>
-                        <Col lg={6}>  
+                        <Col lg={6}>
+                            <FormControl type="text" placeholder="Last Name..."/>
                         </Col>
                         </Row>
                         </FormGroup>
                     </form>
-                    <form className="Form">
+                    <form>
+                        <FormGroup >
+                        <FormControl type="text" placeholder="Address..."/>
+                        </FormGroup>
+                    </form>
+                    <form>
+                        <FormGroup >
+                        <FormControl type="email" placeholder="Email..."/>
+                        </FormGroup>
+                    </form>
+                    <form >
+                        <FormGroup >
+                        <FormControl type="text" placeholder="Phone..."/>
+                        </FormGroup>
+                    </form>
+                    <form>
+                        <FormGroup >
+                        <FormControl type="text" placeholder="City..."/>
+                        </FormGroup>
+                    </form>
+                    <form>
+                        <FormGroup >
+                        <Row>
+                        <Col lg={6}>
+                        <Select options={ CountryList } />
+                        </Col>
+                        <Col lg={6}>
+                            <FormControl type="text" placeholder="Postal/Zip code..."/>
+                        </Col>
+                        </Row>
+                        </FormGroup>
+                    </form>
+                </Col>
+                <Col md={6} >
+                    <h4><Glyphicon glyph="info-sign"></Glyphicon>Payment Method</h4>
+                    
+                        <Image className="icon" src="image/mastercard.png"></Image>
+                        <Image className="icon" src="image/visa.png"></Image>
+                    
+                    <form>
                         <FormGroup >
                         <FormControl type="text" placeholder="CardName..."/>
                         </FormGroup>
                     </form>
-                    <form className="Form">
+                    <form>
                         <FormGroup >
                         <FormControl type="text" placeholder="CardNumber..."/>
                         </FormGroup>
                     </form>
-                    
-                    <FormGroup >
-                        <Row>
-                            <Col lg={6}>
-                                <label>Date:</label>
-                                <div>
-                                <FormControl type="text" className="DateBox"/>
-                                /
-                                <FormControl type="text" className="DateBox"/>
-                                </div>
-                            </Col>
-                            <Col lg={6}>
+                    <Row>
+                        <Col md={6}>
                             <form>
-                                <FormControl type="text" className="cvvBox" placeholder="CVV..."/>
-                                <Button>
-                                    <Glyphicon glyph="question-sign"></Glyphicon>
-                                </Button>
+                                <h5>Date:</h5>
+                                <FormGroup>
+                                <FormControl type="date" placeholder="MM/DD/YYYY..."/>
+                                </FormGroup>
                             </form>
-                            </Col>
-                        </Row>
-                    </FormGroup>
-                    
-                </Col>*/}
+                        </Col>
+                        <Col md={6}>
+                            <form>
+                                <h5>CVV Code:</h5>
+                                <FormGroup>
+                                <FormControl type="text"/>
+                                </FormGroup>
+                            </form>
+                        </Col>
+                    </Row>
+                    <h4>Total Amount:</h4>
+                    <Button bsStyle="primary" bsSize="large" block className="button">
+                        PAY
+                    </Button>
+                </Col>
+                
+            </Row>
+        )
+        _content.push(
+            
+        )
         return (<Grid>{_content}</Grid>)
     }
     render(){

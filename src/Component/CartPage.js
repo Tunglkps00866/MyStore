@@ -1,27 +1,29 @@
 import React from 'react';
 import Page from '../Page';
 import '../Component/CartPage.css'
-import {Breadcrumb,Col,Grid,Row} from 'react-bootstrap';
+import {Breadcrumb,Grid,Row,Image} from 'react-bootstrap';
 class CartPage extends React.Component{
     buildContent(){
         let _content=[];
         _content.push(
             <Row key="01">
-                <Col lg={2}></Col>
-                <Col lg={8}>
                     <Breadcrumb>
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                     <Breadcrumb.Item active>MyCart</Breadcrumb.Item>
                     </Breadcrumb>
-                </Col>
-                <Col lg={2}></Col>
             </Row>
         );
         _content.push(
-            
+            <Row>
+                <h1>YOUR CART</h1>
+            </Row>
         );
         _content.push(
-            
+            <Row>
+                <Image src="image/tainguyen/asus/tainghe-asus.png" className="cartImage"></Image>
+                <h5>Tai nghe Asus</h5>
+                
+            </Row>  
         );
         _content.push(
             
