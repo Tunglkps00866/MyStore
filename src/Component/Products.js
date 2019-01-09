@@ -8,16 +8,15 @@ class Products extends React.Component{
                     <Row>
                         <Col lg={4}>
                         <Thumbnail src={this.props.data.img} alt="242x200">
-                            <h3>{this.props.data.product_name}</h3>
-                            <p>{this.props.data.product_descript}</p>
+                            <h3>{this.props.data.name}</h3>
+                            <p>{this.props.data.descript}</p>
                             <p>
-                            <Button bsStyle="primary"><Glyphicon glyph="menu-hamburger" /></Button>
+                            <Button bsStyle="primary" href={"/chi-tiet/"+this.props.data.id}><Glyphicon glyph="menu-hamburger"/></Button>
                             &nbsp;
                             <Button bsStyle="default">Add to <Glyphicon glyph="shopping-cart" /></Button>
                             </p>
                         </Thumbnail>
                         </Col>
-                        
                     </Row>
                 </Grid>
             </div>

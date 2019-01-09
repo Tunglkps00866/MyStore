@@ -10,7 +10,7 @@ class LaptopList extends React.Component{
         }
     }
     buildContent(){
-        let data= Data.data;
+        let data= Data.getProducList;
         let pages = 3;
         let cols = [];
         let rows = [];

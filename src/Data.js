@@ -1,17 +1,17 @@
 let _data = [
     {
         id:"1",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/Latop-lenovo.png",
-        type: ["new","laptop"],
+        type: ["laptop"],
         brand: ["MSI"],
     },
     {
         id:"2",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/Latop-lenovo.png",
         type: ["laptop"],
@@ -19,8 +19,8 @@ let _data = [
     },
     {
         id:"3",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/tainguyen/logitech/loa-logi.png",
         type: ["speaker"],
@@ -28,8 +28,8 @@ let _data = [
     },
     {
         id:"4",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/tainguyen/logitech/loa-logi.png",
         type: ["new","speaker"],
@@ -37,8 +37,8 @@ let _data = [
     },
     {
         id:"5",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/tainguyen/corsair/chuot-corsair.png",
         type: ["mouse"],
@@ -46,8 +46,8 @@ let _data = [
     },
     {
         id:"6",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Chuot Corsair",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/tainguyen/corsair/chuot-corsair01.png",
         type: ["mouse"],
@@ -55,8 +55,8 @@ let _data = [
     },
     {
         id:"7",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/tainguyen/corsair/tainghe-corsair.png",
         type: ["new","headphone"],
@@ -64,8 +64,8 @@ let _data = [
     },
     {
         id:"8",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/tainguyen/asus/tainghe-asus.png",
         type: ["headphone"],
@@ -73,8 +73,8 @@ let _data = [
     },
     {
         id:"9",
-        product_name:"Lenovo Legion Y520",
-        product_descript: "15.6 Essential Gaming Laptop.",
+        name:"Lenovo Legion Y520",
+        descript: "15.6 Essential Gaming Laptop.",
         prize: "$9.99",
         img: "image/tainguyen/logitech/tainghe-logi.png",
         type: ["headphone"],
@@ -82,10 +82,12 @@ let _data = [
     },
 ];
 module.exports = {
+    
     getProducList: (type) => {
         if(!type) {
             return _data;
         }
+
         let result = [];
         for(let i in _data) {
 
@@ -94,7 +96,7 @@ module.exports = {
             }
 
         }
-        console.log(result)
+ 
         return result;
     },
     getProducListByBrand: (type, brand) => {
@@ -111,5 +113,9 @@ module.exports = {
         }
         console.log(result)
         return result;
+    },
+    getProductById(id){
+        return _data.find(item=> item.id === id);
     }
+
 }

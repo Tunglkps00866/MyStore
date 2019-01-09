@@ -15,13 +15,17 @@ import HeadphoneList from './Component/HeadphonePage';
 import KeyboardPage from './Component/KeyboardPage';
 import MousePage from './Component/MousePage';
 import SignupPage from './Component/SignupPage';
+import ProductDetail from './Component/ProductDetail'
+
 
 const AppRouter = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route exact path="/" component={HomePage}/>
+        
         <Route path="/san-pham" component={ProductList}/>
+        <Route path="/chi-tiet/:idProduct" component={ProductDetail}/>
         <Route path="/laptop" component={LaptopList}/>
         <Route path="/chuot" component={MouseList}/>
         <Route path="/tai-nghe" component={HeadphoneList}/>
