@@ -7,15 +7,17 @@ class Products extends React.Component{
                 <Grid>
                     <Row>
                         <Col lg={4}>
+                        <a href={"/chi-tiet/"+this.props.data.id}>
                         <Thumbnail src={this.props.data.img} alt="242x200">
                             <h3>{this.props.data.name}</h3>
                             <p>{this.props.data.descript}</p>
                             <p>
-                            <Button bsStyle="primary" href={"/chi-tiet/"+this.props.data.id}><Glyphicon glyph="menu-hamburger"/></Button>
+                            
                             &nbsp;
                             <Button bsStyle="default">Add to <Glyphicon glyph="shopping-cart" /></Button>
                             </p>
                         </Thumbnail>
+                        </a>
                         </Col>
                     </Row>
                 </Grid>

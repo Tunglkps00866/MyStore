@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid,Row,Col,Breadcrumb,Image} from 'react-bootstrap';
+import {Grid,Row,Col,Breadcrumb,Image,Glyphicon,Pagination,Button,ButtonGroup} from 'react-bootstrap';
 import Page from '../Page'
 import Data from '../Data';
 
@@ -29,11 +29,24 @@ class ProductDetail extends React.Component{
         );
         _content.push(
             <Row key="02">
-                <Col>
-                    <h3>{product.name}</h3>
+                <Col lg={6}>
                     <Image src={'/'+product.img}></Image> 
                 </Col>
+                <Col lg={6}>
+                    <h3>{product.name}</h3>
+                    <p>{product.descript}</p>
+                    <p>{product.prize}</p>
+                    <ButtonGroup>
+                        <Button><Glyphicon glyph="minus-sign"/></Button>
+                        <p></p>
+                        <Button><Glyphicon glyph="plus-sign"/></Button>
+                    </ButtonGroup>
+                    <Button bsStyle="default">Add to <Glyphicon glyph="shopping-cart" /></Button> 
+                </Col>
             </Row>
+        );
+        _content.push(
+            
         );
         return(<Grid>{_content}</Grid>);
     }

@@ -3,6 +3,7 @@ import Page from '../Page';
 import Products from './Products';
 import Data from '../Data';
 import { Col,Grid,Row } from 'react-bootstrap';
+import Pagi from './Pagination';
 class SpeakerList extends React.Component{
     constructor(props){
         super(props);
@@ -22,6 +23,7 @@ class SpeakerList extends React.Component{
         }
         let _productContent = []
         _productContent.push(<Grid key="content"><Row key={i}>{_content}</Row></Grid>)
+        _productContent.push(<Grid><Row key="01"><Pagi></Pagi></Row></Grid>)
         return _productContent;
     }
     componentDidMount(){
